@@ -35,5 +35,8 @@
     <ClInclude Include="bmem.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="ini.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

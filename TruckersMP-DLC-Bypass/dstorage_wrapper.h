@@ -16,7 +16,7 @@ class DStorageWrapper
 	HMODULE hmodule;
 	static std::mutex hmodule_mutex;
 public:
-	DStorageWrapper();
+	DStorageWrapper(LPCSTR dllname);
 
 	static DStorageWrapper* get() { 
 		return instance;

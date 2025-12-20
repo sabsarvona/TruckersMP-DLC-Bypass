@@ -123,7 +123,7 @@ std::mutex DStorageWrapper::instance_mutex;
 std::condition_variable DStorageWrapper::instance_cv;
 std::mutex DStorageWrapper::hmodule_mutex;
 
-DStorageWrapper::DStorageWrapper()
+DStorageWrapper::DStorageWrapper(LPCSTR dllname)
 {
 	if (DStorageWrapper::instance)
 	{
@@ -131,11 +131,13 @@ DStorageWrapper::DStorageWrapper()
 	}
 
 	std::lock_guard<std::mutex> module_lock(DStorageWrapper::hmodule_mutex);
-	DStorageWrapper::hmodule = LoadLibrary(L"dstorage_og.dll");
+	DStorageWrapper::hmodule = LoadLibraryA(dllname);
 
 	if (!DStorageWrapper::hmodule)
 	{
-		throw std::runtime_error("Failed to load dstorage_og.dll!");
+		std::string msg = "Failed to load " + std::string(dllname) + "!";
+
+		throw std::runtime_error(msg);
 	}
 
 	std::lock_guard<std::mutex> instance_lock(DStorageWrapper::instance_mutex);
