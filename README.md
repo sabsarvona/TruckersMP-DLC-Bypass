@@ -11,6 +11,9 @@ Bypass the "You are not the owner of some DLC you use." kick when using [CreamAP
 
 <!-- ![](https://s1.directupload.eu/images/251219/8tz346w6.png) -->
 
+> [!CAUTION]
+> Use this at your own risk, if you get banned, its your own fault.
+
 # How To Install
 1. Download CreamAPI *(or you can use any other dlc unlocking method, for example `mosbymods.de`)*
 <br><sub>CreamAPI can be compiled yourself from [Here](https://github.com/CyberSys/CreamInstaller) OR directly download the exe [Here (5.0.0)](https://modsfire.com/5jT5q8anF0LLitS)</sub>
