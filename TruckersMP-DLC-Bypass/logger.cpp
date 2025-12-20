@@ -1,3 +1,12 @@
+/*----------------------------------------*/
+// Project	: TruckersMP DLC Bypass
+// File		: logger.cpp
+// 
+// Author	: Baldywaldy09 | Hunter
+// Created	: 13-12-2025
+// Updated	: 20-12-2025
+/*-----------------------------------------*/
+
 #include "logger.h"
 
 #include <Windows.h>
@@ -10,6 +19,7 @@ using namespace std::chrono;
 Logger* Logger::instance = nullptr;
 
 std::mutex Logger::instance_mutex;
+std::condition_variable Logger::instance_cv;
 std::mutex Logger::file_mutex;
 std::mutex Logger::start_time_mutex;
 std::mutex Logger::console_created_mutex;
@@ -98,6 +108,8 @@ Logger::Logger(std::wstring log_folder, std::wstring log_filename, bool create_c
 
 	Logger::start_time = get_current_time_ms();
 	Logger::file << "************ : log created on : " << get_current_datetime_string() << "\n";
+
+	Logger::instance_cv.notify_all();
 }
 
 Logger::~Logger()
@@ -126,14 +138,14 @@ void Logger::info(const char* module_name, const char* format, ...)
 
 	va_list args;
 	va_start(args, format);
-	char buffer[512];
+	char buffer[2048];
 	vsnprintf_s(buffer, sizeof(buffer), format, args);
 	va_end(args);
 
-	char buffer_final[512];
+	char buffer_final[2048];
 	sprintf_s(buffer_final, 512, "%s : [%s] %s\n", get_time_since_start_string(Logger::start_time).c_str(), module_name, buffer);
 
-	printf(buffer_final);
+	printf("%s", buffer_final);
 	Logger::file << buffer_final;
 	Logger::file.flush();
 }
@@ -148,14 +160,14 @@ void Logger::warn(const char* module_name, const char* format, ...)
 
 	va_list args;
 	va_start(args, format);
-	char buffer[512];
+	char buffer[2048];
 	vsnprintf_s(buffer, sizeof(buffer), format, args);
 	va_end(args);
 
-	char buffer_final[512];
+	char buffer_final[2048];
 	sprintf_s(buffer_final, 512, "%s : <WARNING> [%s] %s\n", get_time_since_start_string(Logger::start_time).c_str(), module_name, buffer);
 
-	printf(buffer_final);
+	printf("%s", buffer_final);
 	Logger::file << buffer_final;
 	Logger::file.flush();
 }
@@ -170,14 +182,14 @@ void Logger::error(const char* module_name, const char* format, ...)
 
 	va_list args;
 	va_start(args, format);
-	char buffer[512];
+	char buffer[2048];
 	vsnprintf_s(buffer, sizeof(buffer), format, args);
 	va_end(args);
 
-	char buffer_final[512];
+	char buffer_final[2048];
 	sprintf_s(buffer_final, 512, "%s : <ERROR> [%s] %s\n", get_time_since_start_string(Logger::start_time).c_str(), module_name, buffer);
 
-	printf(buffer_final);
+	printf("%s", buffer_final);
 	Logger::file << buffer_final;
 	Logger::file.flush();
 }
@@ -189,7 +201,7 @@ void Logger::log(LogType type, const char* module_name, const char* format, ...)
 
 	va_list args;
 	va_start(args, format);
-	char buffer[512];
+	char buffer[2048];
 	vsnprintf_s(buffer, sizeof(buffer), format, args);
 	va_end(args);
 

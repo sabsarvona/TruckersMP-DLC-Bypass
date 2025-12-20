@@ -1,3 +1,12 @@
+/*----------------------------------------*/
+// Project	: TruckersMP DLC Bypass
+// File		: dstorage_wrapper.h
+// 
+// Author	: Baldywaldy09 | Hunter
+// Created	: 13-12-2025
+// Updated	: 20-12-2025
+/*-----------------------------------------*/
+
 #pragma once
 #include <Windows.h>
 #include <mutex>

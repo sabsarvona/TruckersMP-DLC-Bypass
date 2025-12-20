@@ -1,3 +1,13 @@
+/*----------------------------------------*/
+// Project	: TruckersMP DLC Bypass
+// File		: dllmain.cpp
+// 
+// Author	: Baldywaldy09 | Hunter
+// Created	: 13-12-2025
+// Updated	: 20-12-2025
+/*-----------------------------------------*/
+
+
 #include <Windows.h>
 #include "ini.h"
 #include "bmem.h"
@@ -113,6 +123,14 @@ void Main()
 		MessageBoxA(NULL, e.what(), "dstorage.dll", MB_OK | MB_ICONERROR);
 		return exit(1);
 	}
+
+	std::string art = R"(  _____ __  __ ____            ____  _     ____   ______   ______   _    ____ ____  
+ |_   _|  \/  |  _ \          |  _ \| |   / ___| | __ ) \ / /  _ \ / \  / ___/ ___| 
+   | | | |\/| | |_) |  _____  | | | | |  | |     |  _ \\ V /| |_) / _ \ \___ \___ \ 
+   | | | |  | |  __/  |_____| | |_| | |__| |___  | |_) || | |  __/ ___ \ ___) |__) |
+   |_| |_|  |_|_|             |____/|_____\____| |____/ |_| |_| /_/   \_\____/____/ 
+)";
+	printf("%s\n", art.c_str());
 
 	const bool& dstorage_enabled = config->Get<bool>("dstorage", "enabled");
 

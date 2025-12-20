@@ -1,3 +1,12 @@
+/*----------------------------------------*/
+// Project	: TruckersMP DLC Bypass
+// File		: logger.h
+// 
+// Author	: Baldywaldy09 | Hunter
+// Created	: 13-12-2025
+// Updated	: 20-12-2025
+/*-----------------------------------------*/
+
 #pragma once
 
 #include <string>
@@ -16,6 +25,7 @@ class Logger
 {
 	static Logger* instance;
 	static std::mutex instance_mutex;
+	static std::condition_variable instance_cv;
 
 	std::fstream file;
 	static std::mutex file_mutex;
@@ -32,6 +42,17 @@ public:
 	static Logger* get() {
 		return instance;
 	};
+
+	static Logger* get_wait(std::chrono::seconds time) {
+		if (instance)
+			return instance;
+
+		// If the instance doesnt exist, wait for a max of x seconds to see if the constructor will finish
+		std::unique_lock<std::mutex> lock(instance_mutex);
+		instance_cv.wait_for(lock, time);
+
+		return instance;
+	}
 	
 	void info	(const char* module_name, const char* format, ...);
 	void warn	(const char* module_name, const char* format, ...);

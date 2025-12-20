@@ -1,3 +1,12 @@
+/*----------------------------------------*/
+// Project	: TruckersMP DLC Bypass
+// File		: bmem.h
+// 
+// Author	: Baldywaldy09 | Hunter
+// Created	: 17-12-2025
+// Updated	: 17-12-2025
+/*-----------------------------------------*/
+
 #pragma once
 
 #include <windows.h>
