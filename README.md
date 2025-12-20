@@ -25,7 +25,7 @@ Bypass the "You are not the owner of some DLC you use." kick when using [CreamAP
 ![](https://s1.directupload.eu/images/251220/i4omxgbc.png)
 
 ## Community Guides
-*None as of now*
+- https://youtu.be/wIFUFqzBNag
 
 # Supported DLC Types
 - [ ] Special Transport
