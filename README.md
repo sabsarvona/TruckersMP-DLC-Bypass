@@ -25,6 +25,7 @@ Bypass the "You are not the owner of some DLC you use." kick when using [CreamAP
 ![](https://s1.directupload.eu/images/251220/i4omxgbc.png)
 
 ## Community Guides
+- https://www.youtube.com/watch?v=3NYi4mztQPQ
 - https://youtu.be/wIFUFqzBNag
 
 # Supported DLC Types
