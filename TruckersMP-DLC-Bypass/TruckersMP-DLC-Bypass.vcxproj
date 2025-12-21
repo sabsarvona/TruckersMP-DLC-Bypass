@@ -148,6 +148,10 @@
     <ClInclude Include="dstorage_wrapper.h" />
     <ClInclude Include="ini.h" />
     <ClInclude Include="logger.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
