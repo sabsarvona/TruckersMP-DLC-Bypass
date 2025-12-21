@@ -5,7 +5,7 @@ TruckersMP-DLC-Bypass
 Bypass the "You are not the owner of some DLC you use." kick when using [CreamAPI](https://github.com/CyberSys/CreamInstaller)
 
 
-![](https://s1.directupload.eu/images/251220/2kikas5f.png)
+![](https://s1.directupload.eu/images/251221/68yrhlzr.png)
 
 ---
 
