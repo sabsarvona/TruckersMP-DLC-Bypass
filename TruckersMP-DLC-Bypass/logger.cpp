@@ -4,7 +4,7 @@
 // 
 // Author	: Baldywaldy09 | Hunter
 // Created	: 13-12-2025
-// Updated	: 20-12-2025
+// Updated	: 21-12-2025
 /*-----------------------------------------*/
 
 #include "logger.h"
@@ -61,6 +61,29 @@ std::string get_current_datetime_string()
 	char buffer[84]; 
 	std::strftime(buffer, sizeof(buffer), "%A %B %d %Y @ %H:%M:%S", &time);
 	return std::string(buffer);
+}
+
+
+enum ConsoleColour {
+	RED,
+	YELLOW,
+	DEFAULT
+};
+
+void set_colour(ConsoleColour colour) {
+	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+
+	switch (colour) {
+	case RED:
+		SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_INTENSITY);
+		break;
+	case YELLOW:
+		SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+		break;
+	case DEFAULT:
+		SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
+		break;
+	}
 }
 
 
@@ -145,7 +168,9 @@ void Logger::info(const char* module_name, const char* format, ...)
 	char buffer_final[2048];
 	sprintf_s(buffer_final, 512, "%s : [%s] %s\n", get_time_since_start_string(Logger::start_time).c_str(), module_name, buffer);
 
+	set_colour(ConsoleColour::DEFAULT);
 	printf("%s", buffer_final);
+
 	Logger::file << buffer_final;
 	Logger::file.flush();
 }
@@ -167,7 +192,9 @@ void Logger::warn(const char* module_name, const char* format, ...)
 	char buffer_final[2048];
 	sprintf_s(buffer_final, 512, "%s : <WARNING> [%s] %s\n", get_time_since_start_string(Logger::start_time).c_str(), module_name, buffer);
 
+	set_colour(ConsoleColour::YELLOW);
 	printf("%s", buffer_final);
+
 	Logger::file << buffer_final;
 	Logger::file.flush();
 }
@@ -189,7 +216,9 @@ void Logger::error(const char* module_name, const char* format, ...)
 	char buffer_final[2048];
 	sprintf_s(buffer_final, 512, "%s : <ERROR> [%s] %s\n", get_time_since_start_string(Logger::start_time).c_str(), module_name, buffer);
 
+	set_colour(ConsoleColour::RED);
 	printf("%s", buffer_final);
+
 	Logger::file << buffer_final;
 	Logger::file.flush();
 }

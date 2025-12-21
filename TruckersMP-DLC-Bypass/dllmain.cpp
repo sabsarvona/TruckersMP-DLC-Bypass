@@ -4,9 +4,9 @@
 // 
 // Author	: Baldywaldy09 | Hunter
 // Created	: 13-12-2025
-// Updated	: 20-12-2025
+// Updated	: 21-12-2025
 /*-----------------------------------------*/
-
+// v1.0.1
 
 #include <Windows.h>
 #include "ini.h"
@@ -32,7 +32,7 @@ uint64_t hooked_mount_dlcs(uint64_t a1)
 	if (result)
 	{
 		base = result;
-		Logger::get()->info("mount_dlcs", "Saved base %p", result);
+		Logger::get()->info("mount_dlcs", "Saved base %p, returning to game", result);
 	}
 	else
 		Logger::get()->error("mount_dlcs", "It seems the game failed.");
@@ -66,35 +66,59 @@ uint64_t hooked_load_plugins(uint64_t a1, uint64_t a2)
 			Logger::get()->info("load_plugins", "Spoofed dlc size of %d to 0, returning to game", original_size);
 		}
 		else
-			Logger::get()->info("load_plugins", "Unable to spoof, missing base! Expect a kick.");
+			Logger::get()->warn("load_plugins", "Unable to spoof, missing base! Expect a kick.");
 	}
 
 	return original_load_plugins(a1, a2);
 }
 
-// This is commented because in theory the patch should be undone, however it seems to work if i dont, and the fact that tmp have another check somewhere i cba to deal with
-/*
-typedef uint64_t(*original_start_game_t)(uint64_t launchpad_handle_u);
-original_start_game_t original_start_game;
 
-uint64_t hooked_start_game(uint64_t launchpad_handle_u)
+namespace prism
 {
-	Logger::get()->info("start_game", "Request to start game...");
+	// basically a const char** (if a prism::string*)
+	class string            // Size: 0x08
+	{
+	public:
+		const char* value;  //0x0000 (0x08)
+
+		string(const char* str) {
+			size_t len = strlen(str) + 1;
+			value = new char[len];
+			strcpy_s(const_cast<char*>(value), len, str);
+		}
+	};
+	static_assert(sizeof(string) == 0x08);
+}
+
+typedef uint64_t(*original_get_dlc_t)(uint64_t a1, prism::string* name);
+original_get_dlc_t original_get_dlc;
+
+uint64_t hooked_get_dlc(uint64_t a1, prism::string* name)
+{
+	Logger::get()->info("get_dlc", "Game is fetching DLC '%s', spoofing back array size", name->value);
 
 	if (base)
 	{
-		uint64_t* array_size = (uint64_t*)(base + 0xF0);
 
+		uint64_t* array_size = (uint64_t*)(base + 0xF0);
 		*array_size = original_size;
 
-		Logger::get()->info("start_game", "Array size returned back to original size of %d, returning to game", original_size);
+		uint64_t result = original_get_dlc(a1, name);
+
+		if (result)
+			Logger::get()->info("get_dlc", "Successfully fetched DLC data, spoofing DLC size back to 0 and returning");
+		else
+			Logger::get()->error("get_dlc", "Unexpected Error! Game failed to fetch DLC, expect a crash.");
+
+		*array_size = 0;
+
+		return result;
 	}
 	else
-		Logger::get()->error("start_game", "Unable to undo spoof, missing base!");
+		Logger::get()->warn("get_dlc", "Unable to spoof, missing base! Expect a kick or crash.");
 
-	return original_start_game(launchpad_handle_u);
+	return original_get_dlc(a1, name);
 }
-*/
 
 
 
@@ -198,24 +222,24 @@ void Main()
 		Logger::get()->info("dllmain", "Hooked function 'load_plugins' successfully @ %p", load_plugins_func_addr);
 
 
-		/*
-		// Then for the continue/load game button
-		uint64_t start_game_func_addr = bmem::patternScan("48 89 4C 24 ?? 55 41 55 48 8D AC 24 ?? ?? ?? ?? 48 81 EC ?? ?? ?? ?? 48 8B 81");
-		if (!bmem::isAddressValid(start_game_func_addr))
+		
+		// Then for the get dlc function
+		uint64_t get_dlc_func_addr = bmem::patternScan("48 89 5C 24 ?? 48 89 74 24 ?? 57 48 83 EC ?? 4C 8B 91 ?? ?? ?? ?? 45");
+		if (!bmem::isAddressValid(get_dlc_func_addr))
 		{
-			Logger::get()->error("dllmain", "Failed to find function 'start_game' for some reason (probably too old or new game ver)");
+			Logger::get()->error("dllmain", "Failed to find function 'get_dlc' for some reason (probably too old or new game ver)");
 			return;
 		}
 
 		// hook it
-		res = bmem::hookFunction((LPVOID)start_game_func_addr, hooked_start_game, (LPVOID*)&original_start_game);
+		res = bmem::hookFunction((LPVOID)get_dlc_func_addr, hooked_get_dlc, (LPVOID*)&original_get_dlc);
 		if (bmem::assert_minhook(res))
 		{
-			Logger::get()->error("dllmain", "Failed to hook function 'start_game' @ %p, %s", start_game_func_addr, bmem::translateMinhookStatus(res));
+			Logger::get()->error("dllmain", "Failed to hook function 'get_dlc' @ %p, %s", get_dlc_func_addr, bmem::translateMinhookStatus(res));
 			return;
 		}
-		Logger::get()->info("dllmain", "Hooked function 'start_game' successfully @ %p", start_game_func_addr);
-		*/
+		Logger::get()->info("dllmain", "Hooked function 'get_dlc' successfully @ %p", get_dlc_func_addr);
+		
 
 		Logger::get()->info("dllmain", "All hooks applied");
 	}
