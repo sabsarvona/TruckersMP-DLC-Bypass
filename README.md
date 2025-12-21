@@ -9,6 +9,21 @@ Bypass the "You are not the owner of some DLC you use." kick when using [CreamAP
 
 ---
 
+# THIS PROJECT NO LONGER WORKS
+> You can blame the greedy developers of TruckersMP <br>
+> Fix anti cheat? :x: <br>
+> Perm ban actual cheaters? :x: <br>
+> Make anti cheat for local sided things and never for actual cheats? ✔️ <br>
+> Perm ban people only using local sided things? ✔️ <br>
+> Ban ACTUAL hackers who troll and greif for only 6 months just so they can do it again? ✔️ <br>
+> **Patch a local sided dlc bypass within 2 days, but still not stop cheaters or fix known bugs? ✔️** <br><br>
+
+TruckersMP are a joke. If you wish to fix this yourself go ahead <br>
+Is it possible? Yes.<br>
+Will i do it? No.
+
+<br><br><br><br>
+
 <!-- ![](https://s1.directupload.eu/images/251219/8tz346w6.png) -->
 
 > [!CAUTION]
