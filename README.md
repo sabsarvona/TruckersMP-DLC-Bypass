@@ -5,10 +5,6 @@ TruckersMP-DLC-Bypass
 Bypass the "You are not the owner of some DLC you use." kick when using [CreamAPI](https://github.com/CyberSys/CreamInstaller) *(or pirated dlcs)*
 
 
-![](https://s1.directupload.eu/images/251221/68yrhlzr.png)
-
----
-
 # THIS PROJECT NO LONGER WORKS
 > You can blame the greedy developers of TruckersMP <br>
 > Fix anti cheat? :x: <br>
@@ -23,6 +19,11 @@ Is it possible? Yes.<br>
 Will i do it? No.
 
 <br><br><br><br>
+
+
+![](https://s1.directupload.eu/images/251221/68yrhlzr.png)
+
+---
 
 <!-- ![](https://s1.directupload.eu/images/251219/8tz346w6.png) -->
 
